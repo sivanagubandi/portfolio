@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BANDI SIVANAGU - Professional Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+
+            font-family: 'Inter', sans-serif;
+
+            background-color: #0a0a0a;
+
+            color: #e5e7eb; /* A light gray for better readability on dark background /
+
+        }
+
+        .glass-effect {
+
+            background: rgba(23, 23, 23, 0.6); / Semi-transparent dark background /
+
+            backdrop-filter: blur(10px);
+
+            -webkit-backdrop-filter: blur(10px);
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+        .glow-effect {
+
+            box-shadow: 0 0 5px #dc2626, 0 0 10px #dc2626, 0 0 15px #dc2626; / Red glow /
+
+        }
+
+        .accent-text {
+
+            color: #dc2626; / Red accent color /
+
+        }
+
+        .project-card:hover .project-overlay {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+        .skill-card:hover svg {
+
+            transform: scale(1.1);
+
+            filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.7)); / Red shadow */
+
+        }
+
+    </style>
+
+</head>
+
+<body class="antialiased">
+
+    <header id="header" class="glass-effect fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+
+            <a href="#hero" class="text-2xl font-bold accent-text">BS</a>
+
+            <div class="hidden md:flex space-x-8 items-center">
+
+                <a href="#about" class="text-gray-300 hover:text-red-500 transition-colors">About</a>
+
+                <a href="#projects" class="text-gray-300 hover:text-red-500 transition-colors">Projects</a>
+
+                <a href="#skills" class="text-gray-300 hover:text-red-500 transition-colors">Skills</a>
+
+                <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-transform hover:scale-105">Contact</a>
+
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+
+            </button>
+
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+
+            <a href="#about" class="block text-gray-300 hover:text-red-500 py-2">About</a>
+
+            <a href="#projects" class="block text-gray-300 hover:text-red-500 py-2">Projects</a>
+
+            <a href="#skills" class="block text-gray-300 hover:text-red-500 py-2">Skills</a>
+
+            <a href="#contact" class="block bg-red-600 hover:bg-red-700 text-white font-medium mt-2 py-2 px-4 rounded-lg text-center">Contact</a>
+
+        </div>
+
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center">
+
+            <div class="max-w-3xl">
+
+                <h1 class="text-5xl md:text-7xl font-bold mb-4">
+
+                    Hi, I'm BANDI SIVANAGU.
+
+                </h1>
+
+                 <h2 class="text-5xl md:text-7xl font-bold mb-6">
+
+                    I build things for the <span class="accent-text">web</span>.
+
+                </h2>
+
+                <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+
+                    I'm a passionate fresher in web development, eager to create modern, responsive, and user-friendly web applications. Let's build something amazing together.
+
+                </p>
+
+                <div class="flex justify-center space-x-6">
+
+                    <a href="https://github.com/sivanagubandi" target="_blank" class="text-gray-400 hover:text-red-500 transition-transform hover:scale-110" aria-label="GitHub Profile">
+
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.852 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/siva-nagu-08826a321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-gray-400 hover:text-red-500 transition-transform hover:scale-110" aria-label="LinkedIn Profile">
+
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about" class="py-20 md:py-32">
+
+            <h2 class="text-4xl font-bold text-center mb-12">About <span class="accent-text">Me</span></h2>
+
+            <div class="max-w-4xl mx-auto">
+
+                <p class="text-lg text-gray-400 mb-4">
+
+                    Hello! I'm Sivanagu, a fresher in web development based in Vijayawada, with a passion for creating dynamic and beautiful web applications. I'm excited to apply my skills and grow within a professional environment. My roll number is <strong class="accent-text">23481A1217</strong>.
+
+                </p>
+
+                <p class="text-lg text-gray-400 mb-4">
+
+                    I possess strong communication and team-building abilities, coupled with a knack for fast learning and public speaking. I am eager to tackle new challenges and contribute effectively to innovative projects.
+
+                </p>
+
+                <p class="text-lg text-gray-400">
+
+                    When I'm not coding, you can find me exploring new hiking trails or diving into a good book. I am an enthusiastic fresher with a strong interest in technology and problem-solving. Passionate about software development and exploring new tools, I enjoy learning emerging technologies and applying them to practical projects.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <section id="projects" class="py-20 md:py-32">
+
+            <h2 class="text-4xl font-bold text-center mb-12">My <span class="accent-text">Projects</span></h2>
+
+            <div class="space-y-16">
+
+                <div class="md:flex md:gap-8 items-center">
+
+                    <div class="md:w-1/2">
+
+                        <div class="project-card group relative overflow-hidden rounded-lg shadow-lg glass-effect">
+
+                            <img src="https://placehold.co/600x400/171717/dc2626?text=House+Hunt" alt="House Hunt Project Screenshot" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+
+                            <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center p-6 text-center opacity-0 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+
+                                <h3 class="text-2xl font-bold mb-2">House Hunt</h3>
+
+                                <p class="text-gray-300 mb-4 text-sm">A MERN stack application for finding rental properties.</p>
+
+                                </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="md:w-1/2 mt-6 md:mt-0">
+
+                        <p class="text-gray-400 leading-relaxed">
+
+                            House Hunt is a web application designed to simplify finding your perfect rental house. It provides an easy-to-use interface to search, filter, and explore listings. Developed using React for a fast experience, it is a complete MERN (MongoDB, Express, React, Node.js) project for end-to-end functionality, making house hunting smarter and more convenient.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="md:flex md:flex-row-reverse md:gap-8 items-center">
+
+                    <div class="md:w-1/2">
+
+                        <div class="project-card group relative overflow-hidden rounded-lg shadow-lg glass-effect">
+
+                            <img src="https://placehold.co/600x400/171717/dc2626?text=AI+Chatbot" alt="Orthopedic AI Chatbot Screenshot" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+
+                            <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center p-6 text-center opacity-0 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+
+                                <h3 class="text-2xl font-bold mb-2">Orthopedic AI Chatbot</h3>
+
+                                <p class="text-gray-300 mb-4 text-sm">A healthcare assistant using Gradio and Gemini API.</p>
+
+                                </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="md:w-1/2 mt-6 md:mt-0">
+
+                        <p class="text-gray-400 leading-relaxed">
+
+                            An intelligent healthcare assistant built using Gradio and Google Gemini API. It allows users to enter symptoms and upload medical scans for AI-driven analysis, providing structured output on diagnosis, diet, and treatment. With an interactive UI, this project demonstrates AI in healthcare by simulating a doctor’s advice through natural conversation.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="skills" class="py-20 md:py-32">
+
+            <h2 class="text-4xl font-bold text-center mb-12">My <span class="accent-text">Skills</span></h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
+
+                <div class="skill-card flex flex-col items-center p-4 glass-effect rounded-lg">
+
+                    <svg class="w-16 h-16 mb-2 text-red-500 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l-4 4-4-4M6 16l-4-4 4-4"></path></svg>
+
+                    <p class="font-semibold">HTML5</p>
+
+                </div>
+
+                <div class="skill-card flex flex-col items-center p-4 glass-effect rounded-lg">
+
+                    <svg class="w-16 h-16 mb-2 text-red-500 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.553L16.5 21.75l-.398-1.197a3.375 3.375 0 00-2.455-2.455L12.75 18l1.197-.398a3.375 3.375 0 002.455-2.455l.398-1.197.398 1.197a3.375 3.375 0 002.455 2.455l1.197.398-1.197.398a3.375 3.375 0 00-2.455 2.455z" /></svg>
+
+                    <p class="font-semibold">CSS3</p>
+
+                </div>
+
+                <div class="skill-card flex flex-col items-center p-4 glass-effect rounded-lg">
+
+                     <svg class="w-16 h-16 mb-2 text-red-500 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" /></svg>
+
+                    <p class="font-semibold">JavaScript</p>
+
+                </div>
+
+                <div class="skill-card flex flex-col items-center p-4 glass-effect rounded-lg">
+
+                    <svg class="w-16 h-16 mb-2 text-red-500 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path></svg>
+
+                    <p class="font-semibold">Python</p>
+
+                </div>
+
+                <div class="skill-card flex flex-col items-center p-4 glass-effect rounded-lg">
+
+                    <svg class="w-16 h-16 mb-2 text-red-500 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"></path></svg>
+
+                    <p class="font-semibold">Java</p>
+
+                </div>
+
+                <div class="skill-card flex flex-col items-center p-4 glass-effect rounded-lg">
+
+                    <svg class="w-16 h-16 mb-2 text-red-500 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+
+                    <p class="font-semibold">C Language</p>
+
+                </div>
+
+                <div class="skill-card flex flex-col items-center p-4 glass-effect rounded-lg">
+
+                    <svg class="w-16 h-16 mb-2 text-red-500 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+
+                    <p class="font-semibold">Communication</p>
+
+                </div>
+
+                <div class="skill-card flex flex-col items-center p-4 glass-effect rounded-lg">
+
+                    <svg class="w-16 h-16 mb-2 text-red-500 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h-4v-6H7v6H3V3h4v6h4V3h4v17zM19 12h2v8h-2V12z"></path></svg>
+
+                    <p class="font-semibold">Team Building</p>
+
+                </div>
+
+                <div class="skill-card flex flex-col items-center p-4 glass-effect rounded-lg">
+
+                    <svg class="w-16 h-16 mb-2 text-red-500 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+
+                    <p class="font-semibold">Fast Learning</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="contact" class="py-20 md:py-32 text-center">
+
+            <h2 class="text-4xl font-bold mb-4">Get In <span class="accent-text">Touch</span></h2>
+
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
+
+                I'm currently open to new opportunities and collaborations. Whether you have a question or just want to say hi, feel free to reach out. I'll get back to you as soon as possible!
+
+            </p>
+
+            <div class="relative inline-block mb-4">
+
+                <p id="email" class="text-lg md:text-xl glass-effect rounded-lg px-6 py-3 font-mono">sivanagubandi@gmail.com</p>
+
+                <button id="copy-button" class="absolute top-1/2 -right-14 transform -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-md transition-transform hover:scale-110" title="Copy to clipboard">
+
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+
+                </button>
+
+            </div>
+
+            <div id="copy-feedback" class="mt-4 text-green-400 opacity-0 transition-opacity duration-300">
+
+                Copied to clipboard!
+
+            </div>
+
+            <p class="text-lg text-gray-400 mt-4">
+
+                You can also reach me at: <span class="accent-text font-semibold">8523081521</span>
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="border-t border-gray-800">
+
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+
+            <p>© 2025 BANDI SIVANAGU. All Rights Reserved.</p>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Mobile menu toggle
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+
+                mobileMenu.classList.toggle('hidden');
+
+            });
+
+            // Close mobile menu when a link is clicked
+
+            const navLinks = document.querySelectorAll('#mobile-menu a');
+
+            navLinks.forEach(link => {
+
+                link.addEventListener('click', () => {
+
+                    mobileMenu.classList.add('hidden');
+
+                });
+
+            });
+
+            // Header background on scroll
+
+            const header = document.getElementById('header');
+
+            window.addEventListener('scroll', () => {
+
+                if (window.scrollY > 50) {
+
+                    header.classList.add('py-2');
+
+                    header.classList.remove('py-4');
+
+                } else {
+
+                    header.classList.add('py-4');
+
+                    header.classList.remove('py-2');
+
+                }
+
+            });
+
+            // Copy to clipboard
+
+            const copyButton = document.getElementById('copy-button');
+
+            const emailText = document.getElementById('email').innerText;
+
+            const copyFeedback = document.getElementById('copy-feedback');
+
+            copyButton.addEventListener('click', () => {
+
+                // Use the modern Clipboard API if available
+
+                if (navigator.clipboard) {
+
+                    navigator.clipboard.writeText(emailText).then(() => {
+
+                        copyFeedback.style.opacity = '1';
+
+                        setTimeout(() => {
+
+                            copyFeedback.style.opacity = '0';
+
+                        }, 2000);
+
+                    }).catch(err => {
+
+                        console.error('Failed to copy text using Clipboard API: ', err);
+
+                    });
+
+                } else {
+
+                    // Fallback for older browsers
+
+                    const textArea = document.createElement('textarea');
+
+                    textArea.value = emailText;
+
+                    document.body.appendChild(textArea);
+
+                    textArea.select();
+
+                    try {
+
+                        document.execCommand('copy');
+
+                        copyFeedback.style.opacity = '1';
+
+                        setTimeout(() => {
+
+                            copyFeedback.style.opacity = '0';
+
+                        }, 2000);
+
+                    } catch (err) {
+
+                        console.error('Failed to copy text using execCommand: ', err);
+
+                    }
+
+                    document.body.removeChild(textArea);
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
